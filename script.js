@@ -21,7 +21,8 @@ $(function () {
                   $('.window-container').fadeIn(1000, invisibleScroll);
                   $('.window-content').animate({
                         width:'320px',
-                        height:'500px'
+                        height:'435px',
+                       
                   },1000);
             });
 
@@ -29,6 +30,18 @@ $(function () {
                   if(event.target == this){
                         $(this).fadeOut(1000, visibleScroll);
                   }   
+            });
+
+            $('.window-close').click(function(event){
+                  if(event.target == this) {
+                        $(this).fadeIn(1000, visibleScroll)
+                  }
+            });
+
+            $('.window-send').click(function(event){
+                  if(event.target == this) {
+                        $(this).fadeIn(1000, visibleScroll)
+                  }
             });
             
 
