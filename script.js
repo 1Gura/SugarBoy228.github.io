@@ -14,8 +14,41 @@ $(function () {
       function visibleScroll (){
       document.body.style.overflow = 'visible';
       }
+      /*function validate () {
+            var userName = document.getElementById("userName");
+            var userTelephone = document.getElementById("userTelephone");
 
-  
+            if(!userName.value) {
+                  userName.style.border = "2px solid red"
+                  return false;
+            }
+
+             if(!userTelephone.value) {
+                  userTelephone.style.border = "2px solid red"
+                  return false;
+            }
+            return true;
+      }*/
+      
+
+      function add() 
+      {
+            $('.window_input').toggleClass('empty-list');
+      }
+
+      /*$('.window-send').on('click', function(){
+            var item = $('.window_input');
+            if(item.length == 0)
+             {
+                  $('.empty-list').show();
+            }
+            
+      });*/
+
+      
+      
+
+     
       $('.open-window')
             .click(function(onmousewheel){
                   $('.window-container').fadeIn(1000, invisibleScroll);
@@ -38,11 +71,11 @@ $(function () {
                   }
             });
 
-            $('.window-send').click(function(event){
+            /*$('.window-send').click(function(event){
                   if(event.target == this) {
                         $(this).fadeIn(1000, visibleScroll)
                   }
-            });
+            });*/
             
 
 
@@ -51,9 +84,9 @@ $(function () {
             $('.window-container').fadeOut(1000);
       });
 
-      $('.window-send').click(function() {     
+      /*$('.window-send').click(function() {     
             $('.window-container').fadeOut(1000);
-      });
+      });*/
 
 
       //"якоря"

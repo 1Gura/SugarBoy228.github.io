@@ -19,7 +19,7 @@
 </head>
 <body> 
 	<div class="window-container">
-		<div class="window-content">
+		<form class="window-content">
 			<button class="window-close open-window"></button>
 			<div class="window-item">
 				<h2 class="window-call window_text">
@@ -33,18 +33,18 @@
 			</div>
 			<div class="window-item">
 				<h4 class="window_input-title">Введите ваше имя</h4>
-				<input type="" name="" class="window_input" placeholder="Илья">
+				<input id="userName" data-rule="name" type="text" name="" class="window_input" required placeholder="Илья">
 			</div>
 			<div class="window-item">
 				<h4 class="window_input-title">Введите номер телефона</h4>
-				<input type="" name="" class="window_input"  placeholder="+79511575115">
+				<input id="userTelephone"  type="telephone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" name="" class="window_input" required  placeholder="+79511575115" >
 			</div>
 			<div class="window-item">
-				<button class="window-send button-phone open-window">
+				<button type="submit" class="window-send button-phone open-window">
 					Отправить
 				</button>
 			</div>
-		</div>
+		</form>
 	</div>
 	<header class="cap">
 		<div class="container cap_container">
