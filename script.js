@@ -45,7 +45,15 @@ $(function () {
             
       });*/
 
-      
+      /*$('.window-send').on('click', function() {
+      	var inp1 = $('#userName');
+      	var inp2 = $('#userTelephone');
+      	if (inp1.length!=0 && inp2.length!=0) {
+      		alert("Форма успешно отправлена!");
+      	}
+      	
+      })*/
+
       
 
      
@@ -99,7 +107,7 @@ $(function () {
            }, 1000);
       });
 
-      //"Модальное окно"
+     
       
 
 
@@ -130,7 +138,7 @@ $(function () {
       	dots: true,    	
       	slidesToShow:1,   	
       	speed: 1000,     	
-      	autoplay:false,
+      	autoplay:true,
       	autoplaySpeed:2000,  
             pauseOnFocus:true,
             pauseOnHover:true,

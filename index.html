@@ -20,7 +20,7 @@
 <body> 
 	<div class="window-container">
 		<form class="window-content" action="http://foo.com" method="get">
-			<button class="window-close open-window"></button>
+			<div class="window-close open-window"></div>
 			<div class="window-item">
 				<h2 class="window-call window_text">
 					Заказать обратный звонок
@@ -33,11 +33,11 @@
 			</div>
 			<div class="window-item">
 				<h4 class="window_input-title">Введите ваше имя</h4>
-				<input id="userName" data-rule="name" type="text" name="" class="window_input" required placeholder="Илья">
+				<input id="userName" data-rule="name" type="text" name="" maxlength="16" class="window_input" required placeholder="Илья">
 			</div>
 			<div class="window-item">
 				<h4 class="window_input-title">Введите номер телефона</h4>
-				<input id="userTelephone"  type="telephone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" name="" class="window_input" required  placeholder="+79511575115" >
+				<input id="userTelephone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"  type="telephone"  name="" class="window_input" required  placeholder="+7 (___) ___-__-__" >
 			</div>
 			<div class="window-item">
 				<button type="submit" class="window-send button-phone open-window">
@@ -62,7 +62,8 @@
 		</ul>
 	</nav>
 	<div class="cap__header-contacts">
-	<div class="cap__phone phone"><a href="#">
+	<div class="cap__phone phone"><a href="#" onclick=" return location.href = 
+	'tel:+7 (951) 157 51 15'">
 		+7 (951) 157-51-51
 	</a></div>
 	<button class="cap__orderPhone button-phone open-window">
@@ -187,11 +188,13 @@
 		Заказать звонок
 		</button>
 		<ul class="footer__social-network">
-			<li class="footer__vk social_opacity"><a href="#"></a></li>
+			<li class="footer__vk social_opacity"><a href=""  onclick=" return location.href = 
+	'https://vk.com/id126132631'"></a></li>
 			<li class="footer__facebook social_opacity"><a href="#"></a></li>
 			<li class="footer__twitter social_opacity"><a href="#"></a></li>
-			<li class="footer__insta social_opacity" ><a href="#"></a></li>
-		</ul>
+			<li class="footer__insta social_opacity" ><a href="#" onclick=" return location.href = 
+	'https://www.instagram.com/i._gura/?hl=ru'" ></a></li>
+		</ul> 
 	</div>
 	</div>
 	</section>
@@ -202,7 +205,11 @@
 	</div>
 </footer>
 <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script src="jquery.inputmask.min.js"></script>
 <script type="text/javascript" src="slick.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
+<script type="text/javascript">
+		  $('#userTelephone').inputmask({"mask": "+7 (999) 999-99-99"}); //specifying options
+	</script>
 </body>
 </html>
