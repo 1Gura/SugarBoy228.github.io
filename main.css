@@ -2631,6 +2631,7 @@ margin-top: -7px;
 
   .main-container__about-me {
     padding-top: 233px;
+    padding-left: 10px;
   }
 
   .main-container__name {
@@ -2639,7 +2640,7 @@ margin-top: -7px;
 
   .main-container__about-me .main-container__front {
   padding-top: 22px;
-  padding-left: 0px;
+
   font-size: 24px;
   letter-spacing: 0.02em;
   padding-bottom: 45px;
