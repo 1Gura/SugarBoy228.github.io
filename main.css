@@ -1175,7 +1175,7 @@ font-weight: 500;
   font-size: 24px;
   padding-left: 15px;
   color: black;
-  padding-bottom: 0;
+  padding-bottom: 30px;
   cursor: pointer;
 }
 
@@ -1209,6 +1209,12 @@ font-weight: 500;
   .footer_social-container {
    margin-right: 19px;
    margin-top: -2px;
+}
+
+@media(max-width: 637px) {
+  .footer_social-container {
+    margin-left: 20px;
+  }
 }
 
 .social-container_order-phone {
@@ -2179,7 +2185,7 @@ letter-spacing: 0.05em;
   font-size: 18px;
   padding-left: 11px;
   color: black;
-  padding-bottom: 0;
+  padding-bottom: 24px;
 }
 
 .footer__phone:hover {
@@ -2857,6 +2863,12 @@ margin-top: -7px;
 
 .footer_contacts address {
  padding-bottom: 24px;
+}
+
+@media(max-width: 830px) {
+  .footer_contacts address {
+  padding-bottom: 10px;
+}
 }
 
 .footer__container-phone {
@@ -3900,20 +3912,23 @@ justify-content: center;
   }
 }
 
-@media (max-width: 428px) {
+@media (max-width: 510px) {
   .footer_elements .footer_contacts {
     margin-left: 14px;
   }
 }
 
-@media(max-width: 402px) {
+@media(max-width: 510px) {
 .footer_elements .footer_contacts {
     margin-top: 27px;
+    width: 400px;
+   
   }
 
 .footer_social-container {
     width: 320px; 
     margin-right: 0px;
+    margin-left: 0;
   }
 
   .footer_social-container .social-container_order-phone {
@@ -3998,8 +4013,8 @@ justify-content: center;
 
 .footer_contacts {
  margin-left: 40px;
- width: 270px;
- height: 90px;
+    width: 220px;
+    height: 90px;
 }
 
 .footer_contacts span {
@@ -4023,7 +4038,7 @@ justify-content: center;
   font-weight: 600;
   font-size: 18px;
   padding-left: 11px;
-  padding-bottom: 0;
+  padding-bottom: 10px ;
   color: #8993AD;
 }
 
