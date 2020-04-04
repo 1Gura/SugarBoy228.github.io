@@ -1,0 +1,50 @@
+
+/*function openMenu() {
+      document.getElementById("sidebar").classList.toggle('active');
+      document.getElementById("toggle-btn").classList.toggle('hide');
+}*/
+
+
+ /*$('.window-send').click(function() {     
+            $('.window-container').fadeOut(1000);
+      });*/
+
+            /*$('.window-send').click(function(event){
+                  if(event.target == this) {
+                        $(this).fadeIn(1000, visibleScroll)
+                  }
+            });*/
+
+/*$('.window-send').on('click', function(){
+            var item = $('.window_input');
+            if(item.length == 0)
+             {
+                  $('.empty-list').show();
+            }
+            
+      });*/
+
+      /*$('.window-send').on('click', function() {
+            var inp1 = $('#userName');
+            var inp2 = $('#userTelephone');
+            if (inp1.length!=0 && inp2.length!=0) {
+                  alert("Форма успешно отправлена!");
+            }
+            
+      })*/
+
+       /*function validate () {
+            var userName = document.getElementById("userName");
+            var userTelephone = document.getElementById("userTelephone");
+
+            if(!userName.value) {
+                  userName.style.border = "2px solid red"
+                  return false;
+            }
+
+             if(!userTelephone.value) {
+                  userTelephone.style.border = "2px solid red"
+                  return false;
+            }
+            return true;
+      }*/

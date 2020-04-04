@@ -57,23 +57,23 @@ $(function () {
      
       $('.open-window')
             .click(function(onmousewheel){
-                  $('.window-container').fadeIn(1000, invisibleScroll);
+                  $('.window-container').fadeIn(300, invisibleScroll);
                   $('.window-content').animate({
                         width:'320px',
                         height:'435px',
                        
-                  },1000);
+                  },300);
             });
 
             $('.window-container').click(function(event){
                   if(event.target == this){
-                        $(this).fadeOut(1000, visibleScroll);
+                        $(this).fadeOut(300, visibleScroll);
                   }   
             });
 
             $('.window-close').click(function(event){
                   if(event.target == this) {
-                        $(this).fadeIn(1000, visibleScroll)
+                        $(this).fadeIn(300, visibleScroll)
                   }
             });
 
@@ -87,22 +87,29 @@ $(function () {
 
 
       $('.window-close').click(function() {     
-            $('.window-container').fadeOut(1000);
+            $('.window-container').fadeOut(300);
       });
 
       /*$('.window-send').click(function() {     
             $('.window-container').fadeOut(1000);
       });*/
 
-
+      /*function slideBack() {
+            $('.cap__information').toggleClass('active');
+            $('.cap__information').toggleClass('btn-padding');
+            $('.cap__information').toggleClass('first');
+            $('.cap__information').toggleClass('second');
+      }*/
       //"якоря"
       $('a').on("click", function(e) {
-           e.preventDefault();
+           /*e.preventDefault();*/
            var href = $(this).attr('href');
-           var offset = $(href).offset().top;        
+           var offset = $(href).offset().top;  
+           slideBack();      
            $('html, body').animate({
             scrollTop: offset,
-           }, 1000);
+           }, 300);
+
       });
 
      
@@ -114,12 +121,36 @@ $(function () {
 	function changeFontColor() 
 	{
 		$('.cap__information').toggleClass('active');
+
 	}
 
 	$('.sidebar-toggle-btn').on('click', function(){
 		changeFontColor();
-            $('.sidebar-toggle-btn').toggleClass('sidebar-toggle-btn_invisible');
+
+            $('.sidebar-toggle-btn').toggleClass('sidebar-toggle-third');
+            $('.sidebar-toggle-btn').toggleClass('btn-padding');
+            $('.top').toggleClass('first');
+            $('.down').toggleClass('second');
+
+
 	});
+
+
+      function slideBack() 
+      {
+            $('.cap__information').removeClass('active');
+            
+      }
+
+      $('.link').on('click', function(){
+            slideBack();
+            $('.sidebar-toggle-btn').toggleClass('sidebar-toggle-third');
+            $('.sidebar-toggle-btn').toggleClass('btn-padding');
+            $('.top').toggleClass('first');
+            $('.down').toggleClass('second');
+
+
+      });
 
 	function sidebar__arrow() 
 	{
@@ -135,14 +166,14 @@ $(function () {
       	arrows:true,
       	dots: true,    	
       	slidesToShow:1,   	
-      	speed: 1000,     	
+      	speed: 300,     	
       	autoplay:true,
-      	autoplaySpeed:2000,  
+      	autoplaySpeed:3000,  
             pauseOnFocus:true,
             pauseOnHover:true,
             pauseOnDotsHover:true,  
             variableWidth:true,
-            waitForAnimate:false,
+            waitForAnimate:true,
           
       	responsive: [
       	{

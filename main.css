@@ -46,6 +46,259 @@ ul {
   padding:0;
 }
 
+
+
+
+/* Спаны в всплывающем меню */
+
+.cap__div-text {
+  font-family: Roboto;
+  position: absolute;
+  transform: rotate(20deg);
+  background: #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 35px;
+  font-weight: 900;
+  left: 49.6%;
+  top: 64%;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+.cap__div-text2 {
+  font-family: Roboto;
+  position: absolute;
+  transform: rotate(-14deg);
+  background: #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  font-weight: 900;
+  left: 24%;
+  top: 54%;
+  cursor: pointer;
+}
+
+.cap__scob {
+  font-family: Roboto;
+  position: absolute;
+  background: #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  cursor: pointer;
+  left: 6.7%;
+  top: 60%;
+  font-size:50px;
+  transform: rotate(28deg)
+}
+
+
+
+.cap__reshetka {
+  font-family: Roboto;
+  position: absolute;
+  background: #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  cursor: pointer;
+  left: 12.7%;
+  top: 19.7%;
+  font-size: 55px;
+  transform: rotate(15deg)
+}
+
+
+.cap__slesh {
+  font-family: Roboto;
+  position: absolute;
+  background: #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  cursor: pointer;
+  left: 80.7%;
+  top: 68%;
+  font-size: 40px;
+  transform: rotate(-25deg);
+}
+
+.cap__div-text_2 {
+  font-family: Roboto;
+  position: absolute;
+  transform: rotate(20deg);
+  background: #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 35px;
+  font-weight: 900;
+  left: 70%;
+  top: 24%;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+.cap__div-text2_2 {
+  font-family: Roboto;
+  position: absolute;
+  transform: rotate(-14deg);
+  background: #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  font-weight: 900;
+  left: 61%;
+  top: 40%;
+  cursor: pointer;
+}
+
+.cap__scob_2 {
+  font-family: Roboto;
+  position: absolute;
+  background: #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  cursor: pointer;
+  left: 16.7%;
+  top: 39%;
+  font-size:50px;
+  transform: rotate(28deg)
+}
+
+
+
+.cap__reshetka_2 {
+  font-family: Roboto;
+  position: absolute;
+  background: #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  cursor: pointer;
+  left: 42.7%;
+  top: 39.7%;
+  font-size: 55px;
+  transform: rotate(15deg)
+}
+
+
+.cap__slesh_2 {
+  font-family: Roboto;
+  position: absolute;
+  background: #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  cursor: pointer;
+  left: 88%;
+  top: 51%;
+  font-size: 40px;
+  transform: rotate(-25deg);
+}
+
+@media (min-width:1024px) {
+  .cap__div-text {
+  display: none;
+}
+
+.cap__div-text2 {
+  display: none;
+}
+
+.cap__scob {
+  display: none;
+}
+
+
+
+.cap__reshetka {
+  display: none;
+}
+
+
+.cap__slesh {
+  display: none;
+}
+
+.cap__div-text_2 {
+  display: none;
+}
+
+.cap__div-text2_2 {
+  display: none;
+}
+
+.cap__scob_2 {
+  display: none;
+}
+
+
+
+.cap__reshetka_2 {
+  display: none;
+}
+
+.cap__slesh_2 {
+  display: none;
+}
+
+}
+
+@media (max-width:550px) {
+  .cap__div-text {
+  font-size: 25px;
+}
+
+.cap__div-text2 {
+  font-size: 20px;
+}
+
+.cap__scob {
+ font-size: 30px;
+}
+
+
+
+.cap__reshetka {
+  font-size: 35px;
+}
+
+
+.cap__slesh {
+   font-size: 30px;
+}
+
+.cap__div-text_2 {
+  font-size: 20px;
+}
+
+.cap__div-text2_2 {
+   font-size: 16px;
+}
+
+.cap__scob_2 {
+ font-size: 24px;
+}
+
+
+
+.cap__reshetka_2 {
+  font-size: 25px;
+}
+
+.cap__slesh_2 {
+   font-size: 20px;
+}
+
+}
+
+/* Спаны в меню */
+
+
+
 .container {
   padding: 0 0;
   margin: 0 auto;
@@ -65,7 +318,7 @@ ul {
 
 .window-close {
   width: 25px;
-  height: 20px;
+  height: 25px;
   background-image: url('img/krestik.png');
   background-size: 25px 20px;
   background-repeat: no-repeat;
@@ -89,8 +342,12 @@ ul {
   opacity: 0.8;
 }
 
+.window-item-text {
+  width: 256px !important;
+ }
+
 .window-item {
-  width: 80%;
+  width: 236px;
   margin: 0 auto;
   padding-top: 15px;
 }
@@ -107,14 +364,14 @@ ul {
 
 .window-container .window-content {
  width: 320px;
- height: 500px;
+ height: 435px;
  margin: 50px auto;
  background: linear-gradient(10deg, #FF8F5A,  #FF8F5A, #FF2F96,  #FF2F96);
  border-radius: 3%;
 }
 
 .window_input {
-  width: 86.5%;
+  width: 230px;
   height: 45px;
   padding-left: 5px;
   color:  #FF2F96;
@@ -123,8 +380,8 @@ ul {
 }
 
 .window-send {
-  height: 40px;
-  width: 90%;
+  height: 40px !important;
+  width: 236px !important;
 }
 
 form:not(:hover) {
@@ -132,18 +389,18 @@ form:not(:hover) {
 }
 
 form>div>input[type="text"],
-form>div>input[type="telephone"] {
+form>div>input[type="tel"] {
 background-color: #F6CBC7;
-  border:none;
+border:none;
 }
 
 form>div>input[type="text"]:focus,
-form>div>input[type="telephone"]:focus {
+form>div>input[type="tel"]:focus {
   background-color: white;
 }
 
  form>div>input[type="text"]:valid,
-form>div>input[type="telephone"]:valid {
+form>div>input[type="tel"]:valid {
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/check.svg');
   background-repeat: no-repeat;
   background-position:98%;
@@ -176,7 +433,7 @@ input {outline:none;}
 .cap__information {
   padding-top: 2px;
   display: flex;
-  font-size: 16px;
+  font-size: 22px;
 }
 
 .cap_list {
@@ -225,7 +482,20 @@ input {outline:none;}
   width: 250px;
   font-weight: 600;
   margin-right: 0px;
-  font-size: 24px;
+  font-size: 30px;
+}
+
+@media(max-width: 550px) and (min-width: 400px) {
+  .cap__phone {
+  
+  font-size: 20px !important;
+}
+
+.cap__orderPhone{
+  width: 35px !important;
+  height: 35px !important;
+  margin-right: 10px !important; 
+}
 }
 
 .phone {
@@ -239,19 +509,22 @@ input {outline:none;}
 .button-phone{
 text-align:center;
 padding:auto;
-font-size: 16px;
+font-size: 25px;
 color: #FF547E;
 background-color: #FBFBFB;
 border: 1px solid #FF1D73;
 letter-spacing: 0.02em;
 font-weight: 500;
+width: 250px;
+height: 55px;
 }
 
 .cap__orderPhone {
   line-height: 45px;
   margin-top: -7px;
-  width: 207px;
-  height: 45px;
+  width: 250px;
+  height: 55px;
+  margin-left: 50px;
 }
 
 .button-phone:hover {
@@ -274,7 +547,7 @@ font-weight: 500;
 
 .main-container {
   display: flex;
-  height: 675px;
+  height: 660px;
   background-image:  url('img/Ell11.jpg');
   background-repeat:  no-repeat;
   background-position:  bottom right;
@@ -286,7 +559,7 @@ font-weight: 500;
 .main-container_men-photo {
   position: absolute;
   left: 62%;
-  top: 7%;
+  top: 5%;
   width: 435px;
 }
 
@@ -471,7 +744,7 @@ font-weight: 500;
 }
 }
 
-@media(max-width: 1240px) and (min-width: 1127px) {
+@media(max-width: 1300px) and (min-width: 1127px) {
 .main-container__reshetka {
   display: none;
 }
@@ -496,7 +769,7 @@ font-weight: 500;
 }
 
 .main-container__about-me {
-  padding-top: 190px;
+  padding-top: 180px;
   font-family: Roboto;
   position: relative;
 }
@@ -1107,7 +1380,7 @@ font-weight: 500;
 .gradient .gradient_text-below {
   line-height: 30px;
   padding-top:22px;
-  font-size: 18px;
+  font-size: 22px;
   max-width: 916px;
   padding-right: 110px;
   letter-spacing: 0.005em;
@@ -1161,18 +1434,18 @@ font-weight: 500;
 
 .footer__container-phone {
   display: flex;
-  width: 245px;
+  width: 284px;
 }
 
 .icon-profile {
-  font-size: 22px;
+  font-size: 30px;
 }
 
 .footer__phone {
   letter-spacing: 0.01em;
-  width: 223px;
+  width: 254px;
   font-weight: 100;
-  font-size: 24px;
+  font-size: 30px;
   padding-left: 15px;
   color: black;
   padding-bottom: 30px;
@@ -1188,13 +1461,13 @@ font-weight: 500;
 .icon-mail {
   margin-left: 0px;
   padding-top:3px;
-  font-size: 24px;
+  font-size: 30px;
 }
 .footer__mail {
   letter-spacing: 0.00em;
   width: 180px;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 30px;
   padding-left: 20px;
   color: black;
   display: flex;
@@ -1222,8 +1495,8 @@ line-height: 30px;
 margin-right: 3px;
 margin-top: -5px;
 padding-top: -3px;
-width: 248px;
-height: 45px;
+width: 250px;
+height: 55px;
 }
 
 .social-container_order-phone:hover {
@@ -1317,7 +1590,7 @@ list-style-type: none;
 
 .footer_inf {
   margin-top: 0px;
-  font-size: 18px;
+  font-size: 22px;
   margin-left: 0px;
 }
 
@@ -1375,13 +1648,13 @@ justify-content: center;
   background: #31293C;
   color: white;
   height: 80px;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 0.01em;
 }
 
 @media(max-width: 1501px) and (min-width: 1127px) {
  .container {
-  width: 867px;
+  width: 1000px;
   }
 }
 @media(max-width: 1500px){
@@ -1396,7 +1669,7 @@ justify-content: center;
 .cap__information {
   margin-top: 0px;
   display: flex;
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: -0.01em;
 }
 
@@ -1436,7 +1709,7 @@ justify-content: center;
   letter-spacing: 0.03em;
   width: 220px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 25px;
   margin-right: -35px;
 }
 
@@ -1446,11 +1719,12 @@ justify-content: center;
 
 .cap__orderPhone {
 line-height: 30px;
-font-size: 11px;
+font-size: 16px;
 margin-top: -5px;
-width: 153px;
-height: 34px;
+width: 180px;
+height: 45px;
 letter-spacing: 0.05em;
+margin-left: 50px;
 }
 
 .cap__orderPhone:hover {
@@ -1527,7 +1801,7 @@ letter-spacing: 0.05em;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
   cursor: pointer;
-  left: 12.7%;
+  left: 8.7%;
   top: 39%;
   font-size: 40px;
   transform: rotate(15deg)
@@ -2124,7 +2398,7 @@ letter-spacing: 0.05em;
 .gradient .gradient_text-below {
   line-height: 22px;
   padding-top: 22px;
-  font-size: 13px;
+  font-size: 18px;
   max-width: 678px;
   padding-right: 50px;
   letter-spacing: 0.018em;
@@ -2167,6 +2441,7 @@ letter-spacing: 0.05em;
 
 .footer_contacts span {
  padding-bottom: 8px;
+ font-size: 20px;
 }
 
 .footer__container-phone {
@@ -2207,7 +2482,7 @@ letter-spacing: 0.05em;
   letter-spacing: 0.00em;
   width: 180px;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   padding-left: 15px;
   color: black;
   display: flex;
@@ -2221,7 +2496,7 @@ letter-spacing: 0.05em;
 .social-container_order-phone {
 line-height: 30px;
 margin-right: 3px;
-font-size: 11px;
+font-size: 14px;
 margin-top: -5px;
 padding-top: -3px;
 width: 185px;
@@ -2308,7 +2583,7 @@ list-style-type: none;
 
 .footer_inf {
   margin-top: 0px;
-  font-size: 12px;
+  font-size: 16px;
   margin-left: 0px;
 
   
@@ -2359,7 +2634,7 @@ justify-content: center;
   background: #31293C;
   color: white;
   height: 57px;
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.01em;
 }
 }
@@ -2405,7 +2680,7 @@ justify-content: center;
 }
 
 .cap .cap__phone {
-  font-size: 17px;
+  font-size: 24px;
   letter-spacing: 0.03em;
   width: 222px;
   font-weight: 600;  
@@ -2415,13 +2690,14 @@ justify-content: center;
 line-height: 30px;
 text-align:center;
 padding:auto;
-font-size: 11px;
+font-size: 16px;
 color: #FF547E;
 margin-top: 3px;
-width: 144px;
-height: 32px;
+width: 205px;
+height: 45px;
 border: 1px solid #FF1D73;
 margin-top: -7px;
+margin-left: 30px;
 }
 
 .cap .cap__orderPhone:hover {
@@ -2493,7 +2769,7 @@ margin-top: -7px;
 .gradient .gradient_text-below {
   line-height: 22px;
   padding-top: 18px;
-  font-size: 13px;
+  font-size: 18px;
   max-width: 700px;
   padding-right: 50px;
   margin-right: 100px;
@@ -2568,7 +2844,7 @@ margin-top: -7px;
     height: 45px;
     font-size: 16px;
     margin-left: 10px;
-    margin-top: -7px;
+    margin-top: -2px;
     padding-top: 3px;
   }
 
@@ -2841,13 +3117,13 @@ margin-top: -7px;
 
 .gradient .gradient_text-below {
   line-height: 30px;
-  padding-top: 26px;
-  padding-right: 0px;
-  font-size: 18px;
-  max-width: 855px;
-  letter-spacing: 0.013em;
-  text-indent: -23px;
-  margin:0 auto 0 5.4%;
+    padding-top: 26px;
+    padding-right: 25px;
+    font-size: 18px;
+    max-width: 855px;
+    letter-spacing: 0.013em;
+    text-indent: -23px;
+    margin: 0 auto 0 5.4%;
 }
 
 .footer_elements {
@@ -3118,6 +3394,91 @@ justify-content: center;
   
 } 
 
+@media(max-width: 830px) and (min-width: 539px) {
+  .gradient {
+  height: 300px !important;
+  }
+}
+
+@media(max-width: 550px) and (min-width: 420px) {
+.cap__header-contacts {
+  margin-right: 0px !important;
+  margin-top: -3px !important;
+  width: 250px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+}
+}
+
+@media (max-width: 420px) {
+  .cap__header-contacts {
+ 
+  width:65% !important;
+  
+}
+ }
+
+@media(max-width: 550px) {
+.cap .sidebar-toggle-btn {
+ left: 16px;
+ padding: 5px 1px 5px 5px;
+ border-radius: 6px ;
+ width: 34px !important;
+ height: 36px;
+ margin-top: -9px;
+}
+
+
+
+.cap .sidebar-toggle-btn span {
+  width: 24px ;
+  height: 3px;
+  margin: 4px 0 4.5px 0;
+  }
+
+   .cap__phone {
+  letter-spacing: 0.06em;
+  width: 180px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-top: 0px;
+  text-align: center;
+  margin-left: -10px;
+  margin-top: 1px;
+  font-size: 18px;
+  }
+
+  .cap__orderPhone {
+  margin-top: -1px;
+  margin-right: 10px; 
+  font-size: 0px;
+  display: inline-block;
+  height: 26px;
+  width: 26px;
+  position: relative;
+  border-top:1.4px #FF3990 solid;
+  border-left: 1.4px #FF736C solid;
+  border-bottom: 1.4px #FF8C5C solid;
+  border-right: 1.4px #FF4F82 solid;
+  border-radius: 100%;
+  background-image: url('img/call.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left:6px;
+}
+
+.cap__orderPhone:hover {
+  background-color: white;
+}
+}
+
+@media(max-width: 830px) and (min-width: 400px) {
+  .cap__header-contacts {
+  margin-top: 0px !important;  
+}
+
+}
+
 @media(max-width: 830px) {
 
 .gradient_scob {
@@ -3169,20 +3530,16 @@ justify-content: center;
 }
 
   /*Кнопка */
-.cap .sidebar-toggle-btn {
- left: 16px;
- padding: 5px 1px 5px 5px;
- border-radius: 6px ;
- width: 34px !important;
- height: 36px;
- margin-top: -9px;
+
+
+.cap__header-contacts {
+  margin-right: 10px;
+  margin-top: -3px;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.cap .sidebar-toggle-btn span {
-  width: 24px ;
-  height: 3px;
-  margin: 4px 0 4.5px 0;
-  }
   /*Кнопка */
   .cap {
   padding-bottom: 0px;
@@ -3190,49 +3547,18 @@ justify-content: center;
   height: 50px;
 }
   
-  .cap__phone {
-  letter-spacing: 0.06em;
-  width: 180px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  margin-top: 0px;
-  text-align: center;
-  margin-left: -10px;
-  margin-top: 1px;
-  font-size: 18px;
-  }
+ 
 
   .cap__header-contacts {
-  margin-right: 0px;
+  margin-right: 10px;
   margin-top: -3px;
-  width: 60%;
+  width: 400px;
   display: flex;
   justify-content: space-between;
 }
 
 
-.cap__orderPhone {
-  margin-top: -1px;
-  margin-right: 20px; 
-  font-size: 0px;
-  display: inline-block;
-  height: 26px;
-  width: 26px;
-  position: relative;
-  border-top:1.4px #FF3990 solid;
-  border-left: 1.4px #FF736C solid;
-  border-bottom: 1.4px #FF8C5C solid;
-  border-right: 1.4px #FF4F82 solid;
-  border-radius: 100%;
-  background-image: url('img/call.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-left:6px;
-}
 
-.cap__orderPhone:hover {
-  background-color: white;
-}
 
   
  .main-container {
@@ -3433,7 +3759,7 @@ justify-content: center;
 .gradient_text {
   color: white;
   font-size: 26px;
-  max-width: 600px;
+  max-width: 650px;
   padding-left:19px;
   padding-right: 10px;
   padding-top: 42px;
@@ -3548,31 +3874,30 @@ justify-content: center;
 
 }
 
-@media(max-width: 700px) {
+/* @media(max-width: 700px) {
   .cap__header-contacts {
-  width: 60%;
+  width: 40%;
 }
 }
 
 @media(max-width: 550px) {
   .cap__header-contacts {
-  width: 65%;
+  width: 50%;
 }
-}
+} */
 
 @media(max-width: 370px) {
   .cap__header-contacts {
-  width: 75.5% !important;
+  width: 70% !important;
 }
 }
 
 @media (max-width: 420px) {
 
-
-.cap__header-contacts {
+/* .cap__header-contacts {
   width: 70%;
 }
-
+ */
 
 
 
@@ -3918,8 +4243,8 @@ justify-content: center;
   }
 }
 
-@media(max-width: 510px) {
-.footer_elements .footer_contacts {
+@media(max-width: 440px) {
+.footer_elements .footer_contacts{
     margin-top: 27px;
     width: 400px;
    
@@ -4077,14 +4402,14 @@ justify-content: center;
 line-height: 30px;
 text-align:center;
 margin-right: 3px;
-font-size: 11px;
+font-size: 12px;
 margin-left:0px;
 color: #FF547E;
 background-color: #FBFBFB;
 margin-top: -5px;
 padding-top: -3px;
 width: 185px;
-height: 31px;
+height: 40px;
 border: 1px solid #FF1D73;
 letter-spacing: 0.07em;
 }
@@ -4146,27 +4471,41 @@ justify-content: center;
   }
 }
 /* Кнопка  */
-@media(max-width: 1127px){
+@media(max-width: 1024px){
 .cap__information {
-  top:-10px;
-  left:-350px;
-  position: absolute;
-  width: 320px;
-  height: 55px;
+  top:0px;
+  left:-111%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(30deg,#FF8F5A,#FF2F96);
   display: inline-block;
-  transition: all 500ms;
+  transition: 300ms;
   cursor: pointer;
   z-index: 1;
   font-family: Roboto;
-  border-radius: 50px;
+  /* border-radius: 50px; */ 
+  border-bottom-right-radius: 10px; 
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  padding-top: 20px;
+  margin-top: 90px;
+}
+
+.cap_list {
+ display: flex;
+ flex-wrap: wrap;
+ width: 100px;
+ justify-content: center;
+ height: 300px;
 }
 
 .cap__information li {
-  font-size: 16px;
+    font-size: 22px;
+    padding-top: 20px;
+    padding-right: 0 !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
 }
 
 .cap__information .board a:hover {
@@ -4175,7 +4514,7 @@ justify-content: center;
 }
 
 .cap__services {
-  padding-left: 10px;
+  padding-left: 0px;
 }
 /*Обратить внимание*/
  .active {
@@ -4185,10 +4524,10 @@ justify-content: center;
 .sidebar-arrow {
   position: absolute;
   align-items: center;
-  width: 25px;
-  height:25px;
+  width: 50px;
+  height:50px;
   border-radius: 100%;
-  left: 92%;
+  left: 90%;
   background-image: url('img/arrow.png');
   background-repeat: no-repeat;
   background-size: 100%;
@@ -4225,6 +4564,28 @@ justify-content: center;
   background: linear-gradient(45deg,#FF8F5A,#FF2F96);
   }
 
+   .first {
+    transition: 300ms;
+    margin: 0 !important;
+    transform: rotate(45deg)  translateX(7%) translateY(38%) ;
+  }
+
+   .second {
+    transition: 300ms;
+    transform: rotate(-45deg) translateX(5%) translateY(0%);
+    margin: 0 !important;
+  }
+
+  .sidebar-toggle-third span:last-child {
+  display: none;
+  }
+
+  .btn-padding {
+    padding: 3px 1px 5px 4px !important  ; 
+  }
+
+
+
  .sidebar-toggle-btn:hover {
   background: linear-gradient(30deg,#FF8F5A,#FF2F96);
 }
@@ -4234,3 +4595,5 @@ justify-content: center;
 }
 
 }
+
+
