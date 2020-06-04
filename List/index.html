@@ -1,0 +1,118 @@
+
+
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="en">
+	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>Список задач</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<script defer src=""></script>
+	<script defer src="js/main-dist.js"></script>
+	</head>
+	<!-- Отображаемое тело страницы -->
+	<body>
+		
+
+<header class="header">
+
+</header>
+		<div class="main-container">
+			<div class="main-container__first-column">
+				<h1>Меню</h1>
+				<div class="main-container__menu">
+					<button class="main-container__button all">Все задачи</button>
+					<button class="main-container__item main-container__--blue">Задачи бессрочные</button>
+					<button class="main-container__item main-container__--yellow">Задачи на неделю</button>
+					<button class="main-container__item main-container__--red">Задачи не день</button>
+				</div>
+			</div>
+			<div class="main-container__second-column">
+				<h1>Задачи</h1>
+				<p class="main-container__task-list-empty">Список пуст...</p>
+				<ul class="main-container__task-list">
+				  <li class="main-container__point" style="width: 0; height: 0;"></li>
+					
+					 <!--	<li class="main-container__task ">
+						<button class="main-container__task-button opacity" ></button>
+						<button class="main-container__strelka opacity"></button>
+						<button class="main-container__editing opacity"></button>
+						<button class="main-container__strikethrough  opacity"></button>
+						<button class="main-container__red-priority  opacity"></button>
+						<button class="main-container__yellow-priority  opacity"></button>
+						<button class="main-container__blue-priority  opacity"></button>
+						
+						<input class="main-container__item-input blue-input" type="text" readonly maxlength="39" value="" placeholder="Задача № 1"></input>	
+						<textarea readonly maxlength="264" class="main-container__item-text">Комментарий</textarea>
+					</li>  -->
+					
+					<!-- <li class="main-container__task ">
+						<button class="main-container__task-button opacity" ></button>
+						<button class="main-container__strelka opacity"></button>
+						<button class="main-container__editing opacity"></button>
+						<button class="main-container__strikethrough  opacity"></button>
+						<button class="main-container__red-priority  opacity"></button>
+						<button class="main-container__yellow-priority  opacity"></button>
+						<button class="main-container__blue-priority  opacity"></button>
+						
+						<input class="main-container__item-input yellow-input" type="text" readonly maxlength="39" value="" placeholder="Задача №2"></input>	
+						<textarea readonly maxlength="264" class="main-container__item-text">Комментарий</textarea>
+					</li> 
+					<li class="main-container__task ">
+						<button class="main-container__task-button opacity" ></button>
+						<button class="main-container__strelka opacity"></button>
+						<button class="main-container__editing opacity"></button>
+						<button class="main-container__strikethrough  opacity"></button>
+						<button class="main-container__red-priority  opacity"></button>
+						<button class="main-container__yellow-priority  opacity"></button>
+						<button class="main-container__blue-priority  opacity"></button>
+						
+						<input class="main-container__item-input red-input" type="text" readonly maxlength="39" value="" placeholder="Задача №3"></input>	
+						<textarea readonly maxlength="264" class="main-container__item-text">Комментарий</textarea>
+					</li> 
+					<li class="main-container__task ">
+						<button class="main-container__task-button opacity" ></button>
+						<button class="main-container__strelka opacity"></button>
+						<button class="main-container__editing opacity"></button>
+						<button class="main-container__strikethrough  opacity"></button>
+						<button class="main-container__red-priority  opacity"></button>
+						<button class="main-container__yellow-priority  opacity"></button>
+						<button class="main-container__blue-priority  opacity"></button>
+						
+						<input class="main-container__item-input red-input" type="text" readonly maxlength="39" value="" placeholder="Задача №3"></input>	
+						<textarea readonly maxlength="264" class="main-container__item-text">Комментарий</textarea>
+					</li>  -->
+				</ul>
+				
+				
+			</div>
+			<div class="main-container__third-column">
+				<h1>Добавление задачи</h1>
+				<div class="task-add">
+					<p class="task-add__error hide">Это поле обязательно для заполнения</p>
+					<input type="text"  class="main-container__input" placeholder="Введите задачу"></input>
+					<textarea class="main-container__textarea" placeholder="Комментарий к задаче"></textarea>
+					<button class="task-add__button">Добавить задачу</button>
+				</div>
+			</div>
+		</div>
+		
+	<footer class="footer">
+	
+
+</footer>
+
+<!-- Подключение скриптов -->
+
+<!-- <script type="text/javascript">
+		  $('#userTelephone').inputmask({"mask": "+7 (999) 999-99-99"}); //specifying options
+		  new WOW().init();
+</script> -->
+
+</body>
+</html>
