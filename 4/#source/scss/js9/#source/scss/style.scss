@@ -1,0 +1,414 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/roboto-v20-cyrillic_latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Roboto'), local('Roboto-Regular'),
+       url('fonts/roboto-v20-cyrillic_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/roboto-v20-cyrillic_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/roboto-v20-cyrillic_latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/roboto-v20-cyrillic_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/roboto-v20-cyrillic_latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+/* Переменные */
+$fz:80px;
+
+
+
+/* Шаблоны */
+%color_btn {
+	background-color: #00CAC4;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+}
+
+/* Миксины */
+
+@mixin fontz($f){
+	font-size: $f;
+}
+//это для верстки на 1920px, потом убрать
+ body {
+	/* width: 1920px; */
+	font-family: Roboto;
+	font-size: 20px;
+}
+
+html {
+	/* width: 1920px; */
+	font-family: Roboto;
+
+}
+
+button :active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+    outline: none;
+}
+
+
+.row {
+	width: 100%;	
+}
+.col-lg-6 {	
+	height: 798px;
+}
+
+.yellow {
+	background-color: yellow;
+}
+.header {
+	padding-top: 53px;
+	position: relative;
+	/* background-color: #E9E9E9; */
+	
+}
+
+.container-width {
+  padding: 0 0;
+  margin: 0 auto;
+  position: relative;
+  width: 1650px;
+}
+
+.bg-img {
+	/* background-image: url(../img/apple.jpg);
+	background-size: 1920px;
+	background-position: 20% 40%;
+	background-repeat: no-repeat; */
+	position: relative;
+	
+	height: 938px;
+	
+
+	img {
+		position: absolute;
+		width: 100%;
+		height: 113%;
+		object-fit: cover;
+	}
+}
+
+
+.container-white {
+background-color: #ffffff;
+padding-top: 1px;
+/* max-width: 1920px; */
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header__logo 	{
+	margin-top:-10px; 
+	margin-left: 3px;
+
+	img {
+		width: 44px;
+		height: 36px;
+	}
+}
+
+.hedaer__nav {
+	margin-top: 8px;
+	width: 865px;
+
+	ul {
+		display: flex;
+		justify-content: space-between;
+		font-weight: bold;
+		font-size: 18px;
+
+		li {
+			letter-spacing: 0.1em;
+		}
+
+	 	li a:before {
+    	display: block;
+    	position: absolute;
+    	content: "";
+    	height: 2px;
+    	width: 0;
+    	background: #00CAC4;
+    	transition: width 0.3s ease-in-out;
+    	left: 0;
+    	bottom: -1px;
+}
+
+		li a:hover:before{			
+			width: 100%;
+		}
+
+		li a:hover {
+			color: #00CAC4;
+		}
+
+		li a:not(:hover){
+			transition: 0.3s;
+			color:#000000;
+			
+		}
+	}
+}
+
+.banner {		
+	padding-top: 230px;
+	width: 710px;
+	height: 852px;
+	
+	
+	.banner__title {
+		font-size: 52px;
+		letter-spacing: 0.096em;
+		font-weight: bold;
+	}
+	.banner__text {
+		padding-top: 28px;
+		padding-left: 10px;
+		font-size: 24px;
+		letter-spacing: 0.05em;
+		color: #A6A6A6;
+		width: 700px;
+		line-height: 40px;
+	}
+
+	.banner__button {
+		width: 254px;
+		height: 76px;
+		margin-left: 8px;
+		margin-top: 30px;
+		@extend %color_btn;
+	}
+
+	button:hover {
+		transition: 0.3s;
+		background-color: #ffffff;
+		color: #00CAC4;
+		
+	}
+
+	button:not(:hover) {
+		transition: 0.3s;
+		@extend %color_btn;
+		
+	}
+
+}
+
+.banner__right{
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	
+}
+
+.about-us {
+	height: 458px;
+	width: 900px;
+	margin: 0 auto;
+	background-color: #ffffff;
+	position: relative;
+	/* display: flex;
+	justify-content: center;
+	flex-wrap: wrap; */
+
+
+	.about-us__title {
+		color: black;
+		margin-top: 133px;
+		letter-spacing: 0.11em;
+		font-size: 40px;
+		font-weight: bold;
+		padding-left: 22px;
+		height: 40px;
+		text-align: center;
+	}
+
+	.about-us__text {
+		color: #8E8E8E;
+		letter-spacing: 0.05em;
+		font-size: 22px;
+		line-height: 35px;
+		text-align: center;
+		padding-top: 40px;
+		padding-left: 20px;
+	}
+
+	.about-us__signature{
+		text-align: center;
+		padding-top: 30px;
+		img {
+			width: 360px;
+    		height: 100px;
+    		padding-left: 15px;
+		}
+	}
+}
+
+.prof {
+	background-color: #E4E4DD;
+	
+	
+	/* padding-left: 140px; */
+	.prof__skills {
+		position: relative;
+		left: 7.3%;
+
+
+	}
+
+	@media(max-width: 992px) {
+		.prof__skills {
+		left: 0%;
+		}
+	}
+	
+
+	h2 {
+		padding-top: 232px;
+		font-size: 40px;
+		font-weight: bold;
+		padding-left: 0px;
+		letter-spacing: 0.08em;
+	}
+
+	img {
+		position: absolute;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+
+	.prof__nav {
+		padding-top: 37px;
+		padding-left: 0px;
+		font-weight: bold;
+		letter-spacing: 0.15em;
+	}	
+
+	.prof__ul {
+		li {
+			height: 103px;
+			padding-bottom: 52px;
+			font-size: 18px;
+		}
+
+		span {
+			padding-left: 19px;
+		}
+
+		li {
+
+			&:hover .prof__scale:before {			
+			width: 100%;
+		}
+
+		&:hover .prof__scale  {
+			color: #10C9C3;
+		}
+
+		&:not(:hover) .prof__scale{
+			transition: 0.3s;
+			color:#000000;
+			
+		}
+		}
+
+		.prof__scale {
+			position: relative;
+			width: 710px;
+			height: 3px;
+			background-color: #D8D8D8;
+			border-radius: 10px;
+			margin-top: 24px;
+
+			&:before {
+    		display: block;
+    		position: absolute;
+    		content: "";
+    		height: 3px;
+    		width: 0;
+    		background: #10C9C3;
+    		transition: width 0.3s ease-in-out;
+    		left: 0;
+		}
+
+		
+
+			.prof__scale-grey {
+				position: absolute;
+				height: 3px;
+				background-color: #D8D8D8;
+				border-radius: 10px;
+				
+			}
+
+			.prof__scale-grey__first {
+					left: 66.7%;
+					width: 237px;
+				}
+
+				.prof__scale-grey__second {
+					left: 85%;
+					width: 110px ;
+				}
+				.prof__scale-grey__third {
+					left: 56%;
+					width: 314px;
+				}
+		}
+	}
+
+	@media(max-width: 992px) {
+		
+		.prof__skills {
+			background-image: url(../img/note2.jfif);
+			background-repeat: no-repeat;
+			
+		}
+		
+		.prof__img {
+			display: none;
+		}
+	}
+}
+
+.blue-line {
+	background-color: #00CAC4;
+	height: 345px;
+
+	.blue-line__flex {
+		display: flex;
+		position: relative;
+		height: 345px;
+
+
+		.blud-line__element {
+			margin-top: 100px;
+			width: 25%;
+			height: 345px;
+			display: flex;
+
+			img {
+				width: 40px;
+				height: 30px;
+			}
+			
+			.blue-line__info {
+				color: #ffffff;
+			}
+		}
+	}
+}
+
+
+
