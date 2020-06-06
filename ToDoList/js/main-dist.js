@@ -75,7 +75,7 @@ function addBlock() {
   }
   else {
 
-  let item = ('<li class="main-container__task "><button class="main-container__task-button opacity"></button><button class="main-container__strelka opacity"></button> <button class="main-container__editing opacity"></button> <button class="main-container__strikethrough  opacity"></button> 	<button class="main-container__red-priority  opacity"></button><button class="main-container__yellow-priority  opacity"></button><button class="main-container__blue-priority  opacity"></button> <input  class="main-container__item-input blue-input" readonly maxlength="39" type="text" placeholder="Введите задачу"  value = '+input.value+'></input><textarea  readonly maxlength="264" placeholder="Введите комментарий" class="main-container__item-text">'+text.value+'</textarea></li>')
+  let item = ('<li class="main-container__task "><button class="main-container__task-button opacity"></button><button class="main-container__strelka opacity"></button> <button class="main-container__editing opacity"></button> <button class="main-container__strikethrough  opacity"></button> 	<button class="main-container__red-priority  opacity"></button><button class="main-container__yellow-priority  opacity"></button><button class="main-container__blue-priority  opacity"></button> <textarea  class="main-container__item-input blue-input" readonly maxlength="39" type="text" placeholder="Введите задачу">'+input.value+'</textarea><textarea  readonly maxlength="264" placeholder="Введите комментарий" class="main-container__item-text">'+text.value+'</textarea></li>')
 
   taskList.insertAdjacentHTML('beforeend',item);
   addToStorage();
@@ -95,14 +95,16 @@ function addBlock() {
 }
 
 function addBlockKye(ev) {
+  
   if(ev.keyCode === 13) {
+    ev.preventDefault();
     if(input.value === "" )  {
       input.classList.add('error');
       textError.classList.remove('hide')
     }
     else {
   
-      let item = ('<li class="main-container__task "><button class="main-container__task-button opacity"></button><button class="main-container__strelka opacity"></button> <button class="main-container__editing opacity"></button> <button class="main-container__strikethrough  opacity"></button> 	<button class="main-container__red-priority  opacity"></button><button class="main-container__yellow-priority  opacity"></button><button class="main-container__blue-priority  opacity"></button> <input  class="main-container__item-input blue-input" readonly maxlength="39" type="text" placeholder="Введите задачу"  value = '+input.value+'></input><textarea  readonly maxlength="264" placeholder="Введите комментарий" class="main-container__item-text">'+text.value+'</textarea></li>')
+      let item = ('<li class="main-container__task "><button class="main-container__task-button opacity"></button><button class="main-container__strelka opacity"></button> <button class="main-container__editing opacity"></button> <button class="main-container__strikethrough  opacity"></button> 	<button class="main-container__red-priority  opacity"></button><button class="main-container__yellow-priority  opacity"></button><button class="main-container__blue-priority  opacity"></button> <textarea  class="main-container__item-input blue-input" readonly maxlength="39" type="text" placeholder="Введите задачу">'+input.value+'</textarea><textarea  readonly maxlength="264" placeholder="Введите комментарий" class="main-container__item-text">'+text.value+'</textarea></li>')
   
     taskList.insertAdjacentHTML('beforeend',item);
     addToStorage();
@@ -163,7 +165,7 @@ function editingTask(el) {
   else {
     elem1.setAttribute('readonly',true);
     elem2.setAttribute('readonly', true);
-    elem1.setAttribute('value', elem1.value);
+    elem1.innerHTML = elem1.value;
     elem2.innerHTML = elem2.value;
     
     addToStorage();
