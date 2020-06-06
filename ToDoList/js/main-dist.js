@@ -51,7 +51,7 @@ function initialState() {
   let item = localStorage.getItem('store');
   if(item  === null) {
     title.style.display = 'block';
-    alert('Не сработало')
+    //alert('Не сработало')
   }
   else {
     taskList.innerHTML = item;
