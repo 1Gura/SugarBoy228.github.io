@@ -132,7 +132,7 @@ button {
   -o-transition: 1s;
   transition: 1s; }
 
-.opened .main-container__item-text {
+.opened .main-container__task-text {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -141,6 +141,14 @@ button {
   grid-auto-columns: auto; }
 
 .opened .main-container__strelka {
+  -webkit-transform: rotate(180deg) !important;
+  -ms-transform: rotate(180deg) !important;
+  transform: rotate(180deg) !important;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+.rotate {
   -webkit-transform: rotate(180deg) !important;
   -ms-transform: rotate(180deg) !important;
   transform: rotate(180deg) !important;
@@ -186,6 +194,7 @@ button {
     left: 40%; } }
 
 .main-container {
+  position: relative;
   padding-top: 50px;
   background-color: #A5B7EE;
   display: -webkit-box;
@@ -194,6 +203,21 @@ button {
   -ms-flex-pack: distribute;
   justify-content: space-around;
   min-height: 100vh; }
+  .main-container .btn-menu {
+    position: absolute;
+    left: 1%;
+    top: 0%;
+    width: 50px;
+    height: 50px;
+    background-color: RGBA(0, 0, 0, 0);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .main-container .btn-menu img {
+      width: 50px; }
+    @media (min-width: 1025px) {
+      .main-container .btn-menu {
+        display: none !important; } }
   .main-container h1 {
     padding-top: 10px;
     font-size: 20px;
@@ -202,6 +226,37 @@ button {
   .main-container .main-container__first-column {
     width: 22%;
     background-color: #DBDBDB; }
+    @media (max-width: 1024px) {
+      .main-container .main-container__first-column {
+        -webkit-animation: goLeft 1s linear;
+        animation: goLeft 1s linear;
+        margin-left: -22%; }
+      @-webkit-keyframes goLeft {
+        0% {
+          margin-left: 0; }
+        20% {
+          margin-left: -4.4%; }
+        40% {
+          margin-left: -9%; }
+        60% {
+          margin-left: -15%; }
+        80% {
+          margin-left: -19%; }
+        100% {
+          margin-left: -22%; } }
+      @keyframes goLeft {
+        0% {
+          margin-left: 0; }
+        20% {
+          margin-left: -4.4%; }
+        40% {
+          margin-left: -9%; }
+        60% {
+          margin-left: -15%; }
+        80% {
+          margin-left: -19%; }
+        100% {
+          margin-left: -22%; } } }
     .main-container .main-container__first-column .main-container__menu {
       padding-left: 10px;
       padding-right: 10px; }
@@ -266,11 +321,12 @@ button {
     position: relative;
     width: 50%;
     background-color: #E5E6E9; }
+    @media (max-width: 1024px) {
+      .main-container .main-container__second-column {
+        width: 60%; } }
     .main-container .main-container__second-column .main-container__task-list-empty {
-      position: absolute;
       color: rgba(112, 104, 101, 0.562);
-      left: 44%;
-      top: 10%; }
+      text-align: center; }
     .main-container .main-container__second-column .main-container__task-list {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -349,7 +405,7 @@ button {
         cursor: pointer;
         width: 20px;
         height: 18px; }
-      .main-container .main-container__second-column .main-container__task .main-container__item-input {
+      .main-container .main-container__second-column .main-container__task .main-container__task-title {
         position: relative;
         margin-top: 25px !important;
         font-size: 18px;
@@ -361,7 +417,7 @@ button {
         width: 95%;
         height: 50px;
         resize: none !important; }
-      .main-container .main-container__second-column .main-container__task .main-container__item-text {
+      .main-container .main-container__second-column .main-container__task .main-container__task-text {
         font-size: 16px;
         color: #737478;
         max-height: 0;
@@ -379,6 +435,9 @@ button {
   .main-container .main-container__third-column {
     width: 30%;
     background-color: #fff; }
+    @media (max-width: 1024px) {
+      .main-container .main-container__third-column {
+        width: 40%; } }
     .main-container .main-container__third-column .task-add {
       position: relative;
       display: -webkit-box;
@@ -412,7 +471,8 @@ button {
         height: 40px;
         width: 100%;
         border-radius: 10px;
-        background-color: #D4DCF6; }
+        background-color: #D4DCF6;
+        overflow: hidden; }
       .main-container .main-container__third-column .task-add .error {
         border: 1px solid red; }
       .main-container .main-container__third-column .task-add textarea {
