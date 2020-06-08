@@ -1,4 +1,3 @@
-
 'use sctrict'
 
 let taskList = document.querySelector('.main-container__task-list')
@@ -29,7 +28,7 @@ function initialState() {
   let item = localStorage.getItem('store');
   if(item  === null) {
     title.style.display = 'block';
-    alert('Не сработало')
+    
   }
   else {
     taskList.innerHTML = item;
@@ -53,14 +52,11 @@ function addBlock() {
   }
   else {
 
-  let item = ('<li class="main-container__task "><button class="main-container__task-button opacity"></button><button class="main-container__strelka opacity"></button> <button class="main-container__editing opacity"></button> <button class="main-container__strikethrough  opacity"></button> 	<button class="main-container__red-priority  opacity"></button><button class="main-container__yellow-priority  opacity"></button><button class="main-container__blue-priority  opacity"></button> <p class="main-container__task-title blue-input">'+input.value+'</p><p class="main-container__task-text">'+text.value+'</p></li>')
+  let item = ('<li class="main-container__task "><p class="error-message">Превышенно допустимое количество символов!</p><button class="main-container__task-button opacity"></button><button class="main-container__strelka opacity"></button> <button class="main-container__editing opacity"></button> <button class="main-container__strikethrough  opacity"></button> 	<button class="main-container__red-priority  opacity"></button><button class="main-container__yellow-priority  opacity"></button><button class="main-container__blue-priority  opacity"></button> <p class="main-container__task-title blue-input" maxlength="39">'+input.value+'</p><p class="main-container__task-text">'+text.value+'</p></li>')
 
   taskList.insertAdjacentHTML('beforeend',item);
   addToStorage();
 
-  
- 
-  
   input.value = "";
   text.value = "";
   input.classList.remove('error');
@@ -74,13 +70,14 @@ function addBlock() {
 
 function addBlockKye(ev) {
   if(ev.keyCode === 13) {
+    
     if(input.value === "" )  {
       input.classList.add('error');
       textError.classList.remove('hide')
     }
     else {
-  
-      let item = ('<li class="main-container__task "><button class="main-container__task-button opacity"></button><button class="main-container__strelka opacity"></button> <button class="main-container__editing opacity"></button> <button class="main-container__strikethrough  opacity"></button> 	<button class="main-container__red-priority  opacity"></button><button class="main-container__yellow-priority  opacity"></button><button class="main-container__blue-priority  opacity"></button> <p class="main-container__task-title blue-input">'+input.value+'</p><p class="main-container__task-text">'+text.value+'</p></li>')
+      
+      let item = ('<li class="main-container__task "><p class="error-message">Превышенно допустимое количество символов!</p><button class="main-container__task-button opacity"></button><button class="main-container__strelka opacity"></button> <button class="main-container__editing opacity"></button> <button class="main-container__strikethrough  opacity"></button> 	<button class="main-container__red-priority  opacity"></button><button class="main-container__yellow-priority  opacity"></button><button class="main-container__blue-priority  opacity"></button> <p class="main-container__task-title blue-input" maxlength="39">'+input.value+'</p><p class="main-container__task-text">'+text.value+'</p></li>')
   
     taskList.insertAdjacentHTML('beforeend',item);
     addToStorage();
@@ -132,16 +129,39 @@ taskList.addEventListener('click', function(event) {
 
 function editingTask(el) {
   const taskEl = el.closest('.main-container__task');
-  const taskTitle = taskEl.querySelector('.main-container__task-title');
-  const taskText = taskEl.querySelector('.main-container__task-text');
+  const error = taskEl.querySelector('.error-message')
+  let taskTitle = taskEl.querySelector('.main-container__task-title');
+  let taskText = taskEl.querySelector('.main-container__task-text');
   if (taskTitle.contentEditable === 'true') {
     taskTitle.contentEditable = false;
     taskText.contentEditable = false;
+    error.classList.remove('show');
+    addToStorage();
+
   } else {
     taskTitle.contentEditable = true; 
     taskText.contentEditable = true;
+    taskEl.addEventListener('keydown', function(event) {
+      if(event.keyCode == 13) {
+        event.preventDefault();
+        taskTitle.contentEditable = false;
+        taskText.contentEditable = false;
+        error.classList.remove('show');
+        addToStorage();
+      }
+      else {
+      if(taskTitle.textContent.length > 50) {
+        error.classList.add('show');
+        if(event.keyCode != 8) {
+        event.preventDefault();
+        }
+      }
+      else {
+        error.classList.remove('show');
+        }
+      }
+    })
   }
-  addToStorage();
 }
 
 taskList.addEventListener('click', function(event) {

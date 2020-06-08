@@ -160,7 +160,7 @@ button {
   display: none; }
 
 .show {
-  display: block; }
+  display: block !important; }
 
 .test {
   position: absolute;
@@ -192,6 +192,12 @@ button {
     left: -100%; }
   100% {
     left: 40%; } }
+
+.error-message {
+  position: absolute;
+  color: red;
+  left: 3.5%;
+  display: none; }
 
 .main-container {
   position: relative;
@@ -407,6 +413,7 @@ button {
         height: 18px; }
       .main-container .main-container__second-column .main-container__task .main-container__task-title {
         position: relative;
+        overflow: hidden;
         margin-top: 25px !important;
         font-size: 18px;
         padding: 10px;
@@ -425,13 +432,12 @@ button {
         padding: 0;
         background-color: #DBDBDB;
         width: 95%;
-        overflow: hidden;
         -webkit-transition: all 0.3s;
         -o-transition: all 0.3s;
         transition: all 0.3s;
         font-weight: 400;
         line-height: 24px;
-        resize: none; }
+        overflow-y: auto; }
   .main-container .main-container__third-column {
     width: 30%;
     background-color: #fff; }
