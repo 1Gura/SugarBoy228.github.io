@@ -481,10 +481,16 @@ button {
         overflow: hidden; }
       .main-container .main-container__third-column .task-add .error {
         border: 1px solid red; }
-      .main-container .main-container__third-column .task-add textarea {
+      .main-container .main-container__third-column .task-add .comment {
+        position: absolute;
+        top: 25%;
+        left: 10.5%;
+        color: #737478;
+        font-size: 16px; }
+      .main-container .main-container__third-column .task-add .main-container__textarea {
         font-size: 16px;
         color: black;
-        height: 200px;
+        min-height: 200px;
         border-radius: 10px;
         margin: 10px 10px 10px 10px !important;
         width: 100% !important;
