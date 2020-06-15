@@ -23,8 +23,19 @@
 <header class="header">
 
 </header>
-	<header class="header">
-
+<header class="cap">
+	<!-- <button class="btn-menu">
+		
+		<img class="btn-menu__img" src="../img/1.png" alt="">
+	</button> -->
+	<div class="btn-menu"></div>
+	<div class="cap__header-menu ">
+		<button class="cap__header-btn all-tasks">Все задачи</button>
+		<button class="cap__header-btn blue ">Задачи бессрочные</button>
+		<button class="cap__header-btn yellow ">Задачи на неделю</button>
+		<button class="cap__header-btn red ">Задачи на день</button>
+	</div>
+	
 </header>
 		<div class="main-container">
 			<div class="main-container__first-column">
@@ -48,7 +59,7 @@
 				<h1>Добавление задачи</h1>
 				<div class="task-add">
 					<p class="task-add__error hide">Это поле обязательно для заполнения</p>
-					<input maxlength="39" type="text"  class="main-container__input" placeholder="Введите задачу"></input>
+					<input maxlength="50" type="text"  class="main-container__input" placeholder="Введите задачу"></input>
 					<label class="comment">Оставьте комментарий</label>
 					<div class="main-container__textarea" ></div>
 					<button class="task-add__button">Добавить задачу</button>
