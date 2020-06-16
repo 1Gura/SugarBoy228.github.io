@@ -49,6 +49,9 @@ let comment = document.querySelector('.comment')
 let btnMenu = document.querySelector('.btn-menu');
 let firstColumn = document.querySelector('.main-container__first-column');
 let capHeaderMenu = document.querySelector('.cap__header-menu');
+let completed = document.querySelector('.main-container__completed');
+let cap = document.querySelector('.cap');
+let headerMenu = document.querySelector('.cap__header-menu');
 var el;
 
 
@@ -73,6 +76,53 @@ function addToStorage() {
   //console.log(store);
 }
 
+allShow(allTasks);
+
+function printDate() {
+	let d = new Date();
+
+	let mounth = ['Января', 'Февраля', 
+	'Марта', 'Апреля', 'Мая', 
+	'Июня', 'Июля', 'Августа', 
+	'Сентября', 'Октября', 'Ноября', 'Декабря'];
+
+	let days = [
+		'Понедельник', 'Вторник', 
+		'Среда','Четверг', 'Пятница', 
+		'Суббота','Воскресенье'
+	];
+
+	let day = d.getDay();
+	let date = d.getDate();
+	let mount = d.getMonth();
+	let hours = d.getHours();
+	let minutes = d.getMinutes();
+	let seconds = d.getSeconds();
+	let year = d.getFullYear();
+
+	//Склонение часов
+	let hour = declOfNum(hours, ['Час', 'Часа', 'Часов']);
+
+	//Склонение минут
+	let minute = declOfNum(minutes, ['Минута', 'Минуты', 'Минут']);
+
+	//Склонение секунд
+
+	let second = declOfNum(seconds, ['Секунда',  'Секунды', 'Секунд']);
+	
+	
+	// console.log('Сегодня ' + date + ' ' + mounth[mount] + ' ' + year + ', ' + days[day-1] + ', ' + hours + ' ' + hour+ ' '
+  //  + minutes + ' ' + minute + ' ' + seconds + ' ' + second );	
+  let data = day+ ' '+mounth[mount]+ ' '+year
+  return (data);
+}
+
+
+function declOfNum(number, titles) {  
+    let cases = [2, 0, 1, 1, 1, 2];  
+    return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];  
+}
+
 function addBlock() {
   if(input.value === "" )  {
     input.classList.add('error');
@@ -81,7 +131,18 @@ function addBlock() {
   else {
   // let item = ('<li class="main-container__task "><p class="error-message">Превышенно допустимое количество символов!</p><button class="main-container__task-button opacity"></button><button class="main-container__strelka opacity"></button> <button class="main-container__editing opacity"></button> <button class="main-container__strikethrough  opacity"></button> 	<button class="main-container__red-priority  opacity"></button><button class="main-container__yellow-priority  opacity"></button><button class="main-container__blue-priority  opacity"></button> <p class="main-container__task-title blue-input" maxlength="39">'+input.value+'</p><textarea class="main-container__task-text">'+text.value+'</textarea></li>')
 
-  let item = ('<li class="main-container__task "><p class="error-message">Превышенно допустимое количество символов!</p><button class="main-container__task-button opacity"></button><button class="main-container__strelka opacity"></button> <button class="main-container__editing opacity"></button> <button class="main-container__strikethrough  opacity"></button> 	<button class="main-container__red-priority  opacity"></button><button class="main-container__yellow-priority  opacity"></button><button class="main-container__blue-priority  opacity"></button> <p class="main-container__task-title blue-input">'+input.value+'</p><div class="main-container__task-text">'+text.innerHTML+'</div></li>')
+  // const date = new Date()
+  // const year = date.getYear() ;
+  // const mounth = date.getMonth();
+  // const day = date.getDay();
+  
+  // console.log(year, mounth, day);
+
+  const date =  printDate();
+
+  
+
+  let item = ('<li class="main-container__task "><p class="error-message">Превышен лимит символов!</p><button class="main-container__task-button opacity"></button><button class="main-container__strelka opacity"></button> <button class="main-container__editing opacity"></button> <button class="main-container__strikethrough  opacity"></button> 	<button class="main-container__red-priority  opacity"></button><button class="main-container__yellow-priority  opacity"></button><button class="main-container__blue-priority  opacity"></button> <p class="main-container__task-title blue-input">'+input.value+'</p><div class="main-container__task-text">'+text.innerHTML+'</div><p class="data">'+date+'</p></li>')
 
 
   taskList.insertAdjacentHTML('beforeend',item);
@@ -106,8 +167,9 @@ function addBlockKye(ev) {
       textError.classList.remove('hide')
     }
     else {
+      const date =  printDate();
       
-      let item = ('<li class="main-container__task "><p class="error-message">Превышенно допустимое количество символов!</p><button class="main-container__task-button opacity"></button><button class="main-container__strelka opacity"></button> <button class="main-container__editing opacity"></button> <button class="main-container__strikethrough  opacity"></button> 	<button class="main-container__red-priority  opacity"></button><button class="main-container__yellow-priority  opacity"></button><button class="main-container__blue-priority  opacity"></button> <p class="main-container__task-title blue-input">'+input.value+'</p><div class="main-container__task-text">'+text.innerHTML+'</div></li>')
+      let item = ('<li class="main-container__task "><p class="error-message">Превышен лимит символов!</p><button class="main-container__task-button opacity"></button><button class="main-container__strelka opacity"></button> <button class="main-container__editing opacity"></button> <button class="main-container__strikethrough  opacity"></button> 	<button class="main-container__red-priority  opacity"></button><button class="main-container__yellow-priority  opacity"></button><button class="main-container__blue-priority  opacity"></button> <p class="main-container__task-title blue-input">'+input.value+'</p><div class="main-container__task-text">'+text.innerHTML+'</div><p class="data">'+date+'</p></li>')
   
     taskList.insertAdjacentHTML('beforeend',item);
     addToStorage();
@@ -140,6 +202,7 @@ function deleteTask(task) {
 function hideComments(task) {
   el = task.parentNode;
   el.classList.toggle('opened');
+  addToStorage();
 }
 
 btn.addEventListener('click', addBlock);
@@ -153,6 +216,9 @@ comment.addEventListener('click', function(e) {
 text.addEventListener('keyup', function(e) {
   if(text.textContent.length === 0) {
     comment.classList.remove('hide')
+    if(e.keyCode === 13) {
+      comment.classList.add('hide')
+    }
   }  
   else  {
   comment.classList.add('hide')
@@ -160,8 +226,12 @@ text.addEventListener('keyup', function(e) {
 })
 
 text.addEventListener('keydown', function(e) {
+
   if(text.textContent.length === 0) {
     comment.classList.remove('hide')
+    if(e.keyCode === 13) {
+      comment.classList.add('hide')
+    }
   }  
   else  {
   comment.classList.add('hide')
@@ -234,12 +304,13 @@ taskList.addEventListener('click', function(event) {
 
 
 function strikethroughTask(el) {
-  let elem1 = el.closest('.main-container__task');
-  let titleText = elem1.querySelector('.main-container__task-title')
-  
-  titleText.classList.toggle('strikethrough');
-    //console.log(elem1);
-    addToStorage();
+
+  const taskEl = el.closest('.main-container__task');
+  const taskTitle = taskEl.querySelector('.main-container__task-title');
+  taskTitle.classList.toggle('strikethrough');
+  taskTitle.classList.remove('blue-input' , 'yellow-input' , 'red-input');
+  taskEl.classList.add('hide');
+  addToStorage();
 }
 
 taskList.addEventListener('click', function(event) {
@@ -252,7 +323,7 @@ function red(el) {
   const taskEl = el.closest('.main-container__task');
   const taskTitle = taskEl.querySelector('.main-container__task-title');
   taskTitle.classList.add('red-input');
-  taskTitle.classList.remove('blue-input' , 'yellow-input');
+  taskTitle.classList.remove('blue-input' , 'yellow-input','strikethrough');
   
   addToStorage();
 }
@@ -267,7 +338,7 @@ function yellow(el) {
   const taskEl = el.closest('.main-container__task');
   const taskTitle = taskEl.querySelector('.main-container__task-title');
   taskTitle.classList.add('yellow-input');
-  taskTitle.classList.remove('blue-input' , 'red-input');
+  taskTitle.classList.remove('blue-input' , 'red-input','strikethrough');
   
   addToStorage();
 }
@@ -282,7 +353,7 @@ function blue(el) {
   const taskEl = el.closest('.main-container__task');
   const taskTitle = taskEl.querySelector('.main-container__task-title');
   taskTitle.classList.add('blue-input');
-  taskTitle.classList.remove('red-input' , 'yellow-input');
+  taskTitle.classList.remove('red-input' , 'yellow-input','strikethrough');
   addToStorage();
 }
 
@@ -384,10 +455,14 @@ targetButtons.addEventListener('click', function(event) {
 });
 
 function allShow(el) {
-  let element =  el.parentNode.parentNode.parentNode.children[1].children[2];
-  for(let i = 0; i<element.children.length; i++) {
-   if(element.children[i].classList.contains('main-container__task')) {
-      element.children[i].classList.remove('hide');
+  let element =  el.closest('.main-container');
+  let elementTarget = element.querySelector('.main-container__task-list'); 
+  for(let i = 0; i<elementTarget.children.length; i++) {
+   if(elementTarget.children[i].classList.contains('main-container__task')) {
+      elementTarget.children[i].classList.remove('hide');
+      if(elementTarget.children[i].querySelector('.strikethrough')) {
+      elementTarget.children[i].classList.add('hide');
+    }
    }
  }
  }
@@ -398,9 +473,178 @@ targetButtons.addEventListener('click', function(event) {
   }
 });
 
+function headerAll(el) {
+  let element =  el.closest('body');
+  console.log(element);
+  
+  let elementTarget = element.querySelector('.main-container__task-list');
+  console.log(elementTarget);
+
+  
+  for(let i = 0; i<elementTarget.children.length; i++) {
+   if(elementTarget.children[i].classList.contains('main-container__task')) {
+      elementTarget.children[i].classList.remove('hide');
+      if(elementTarget.children[i].querySelector('.strikethrough')) {
+      elementTarget.children[i].classList.add('hide');
+    }
+   }
+ }
+ }
+
+headerMenu.addEventListener('click', function() {
+  if(event.target.classList.contains('all-tasks')) {
+    headerAll(event.target) 
+  }
+});
+
+function headerBlue(el) {
+  let element =  el.closest('body');
+  console.log(element);
+  
+  let elementTarget = element.querySelector('.main-container__task-list');
+  console.log(elementTarget);
+
+
+  for(let i = 0; i<elementTarget.children.length; i++) {
+    let taskTitle = elementTarget.querySelector('.main-container__task-title')
+    if(elementTarget.children[i].querySelector('.blue-input')) {
+     elementTarget.children[i].classList.remove('hide');
+      console.log(elementTarget.children[i]);
+    } 
+    else {
+     elementTarget.children[i].classList.add('hide');
+    }
+  }
+ }
+
+headerMenu.addEventListener('click', function() {
+  if(event.target.classList.contains('blue')) {
+    headerBlue(event.target) 
+  }
+});
+
+
+function headerYellow(el) {
+  let element =  el.closest('body');
+  console.log(element);
+  
+  let elementTarget = element.querySelector('.main-container__task-list');
+  console.log(elementTarget);
+
+  
+  for(let i = 0; i<elementTarget.children.length; i++) {
+    let taskTitle = elementTarget.querySelector('.main-container__task-title')
+    if(elementTarget.children[i].querySelector('.yellow-input')) {
+     elementTarget.children[i].classList.remove('hide');
+      console.log(elementTarget.children[i]);
+    } 
+    else {
+     elementTarget.children[i].classList.add('hide');
+    }
+  }
+ }
+
+headerMenu.addEventListener('click', function() {
+  if(event.target.classList.contains('yellow')) {
+    headerYellow(event.target) 
+  }
+});
+
+function headerRed(el) {
+  let element =  el.closest('body');
+  console.log(element);
+  
+  let elementTarget = element.querySelector('.main-container__task-list');
+  console.log(elementTarget);
+
+  
+  for(let i = 0; i<elementTarget.children.length; i++) {
+    let taskTitle = elementTarget.querySelector('.main-container__task-title')
+    if(elementTarget.children[i].querySelector('.red-input')) {
+     elementTarget.children[i].classList.remove('hide');
+      console.log(elementTarget.children[i]);
+    } 
+    else {
+     elementTarget.children[i].classList.add('hide');
+    }
+  }
+ }
+
+headerMenu.addEventListener('click', function() {
+  if(event.target.classList.contains('red')) {
+    headerRed(event.target) 
+  }
+});
+
+function headerCompleted(el) {
+  let element =  el.closest('body');
+  console.log(element);
+  
+  let elementTarget = element.querySelector('.main-container__task-list');
+  console.log(elementTarget);
+
+  
+  for(let i = 0; i<elementTarget.children.length; i++) {
+    let taskTitle = elementTarget.querySelector('.main-container__task-title')
+    if(elementTarget.children[i].querySelector('.strikethrough')) {
+     elementTarget.children[i].classList.remove('hide');
+      console.log(elementTarget.children[i]);
+    } 
+    else {
+     elementTarget.children[i].classList.add('hide');
+    }
+  }
+ }
+
+headerMenu.addEventListener('click', function() {
+  if(event.target.classList.contains('completed')) {
+    headerCompleted(event.target) 
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function strikethroughShow(el) {
+  let element =  el.closest('.main-container');
+  let elementTarget = element.querySelector('.main-container__task-list');
+ 
+  let taskTitle = elementTarget.querySelector('.main-container__task-title')
+ //console.log(taskTitle);
+ 
+  for(let i = 0; i<elementTarget.children.length; i++) {
+    let taskTitle = elementTarget.querySelector('.main-container__task-title')
+    if(elementTarget.children[i].querySelector('.strikethrough')) {
+     elementTarget.children[i].classList.remove('hide');
+      console.log(elementTarget.children[i]);
+    } 
+    else {
+     elementTarget.children[i].classList.add('hide');
+    }
+  }
+ }
+
+completed.addEventListener('click', function(event) {
+  if(event.target.classList.contains('main-container__completed')) {
+    strikethroughShow(event.target) 
+  }
+})
+
 btnMenu.addEventListener('click', function() {
   btnMenu.classList.toggle('rotate');
   capHeaderMenu.classList.toggle('back');
+  cap.classList.toggle('size');
 },500);
 
 
