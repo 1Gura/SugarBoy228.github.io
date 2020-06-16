@@ -365,7 +365,8 @@ button {
     transition: all 0.5s;
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
-    transform: rotate(180deg); }
+    transform: rotate(180deg);
+    margin-right: 5px; }
     @media (min-width: 700px) {
       .cap .btn-new-task {
         display: none; } }
