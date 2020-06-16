@@ -592,6 +592,8 @@ button {
       padding: 5px 5px 20px 20px;
       border-radius: 10px;
       background-color: #F1F1F1; }
+      .main-container .main-container__second-column .main-container__task:last-child {
+        margin-bottom: 80px; }
       .main-container .main-container__second-column .main-container__task .main-container__task-button {
         float: right;
         background-image: url(../img/krestik.webp);
