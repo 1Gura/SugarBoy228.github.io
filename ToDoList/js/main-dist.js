@@ -26,6 +26,7 @@
 let taskList = document.querySelector('.main-container__task-list')
 let items = document.querySelectorAll('.main-container__task')
 let taskAdd = document.querySelector('.task-add')
+let body = document.querySelector('body')
 let btn = document.querySelector('.task-add__button');
 let key = document.querySelector('.main-container__input');
 let content = document.querySelector('.main-container__point');
@@ -52,6 +53,10 @@ let capHeaderMenu = document.querySelector('.cap__header-menu');
 let completed = document.querySelector('.main-container__completed');
 let cap = document.querySelector('.cap');
 let headerMenu = document.querySelector('.cap__header-menu');
+let btnNewTask = document.querySelector('.btn-new-task');
+let thirdColumn = document.querySelector('.main-container__third-column');
+let secondColumn = document.querySelector('.main-container__second-column');
+let tasks = document.querySelector('.tasks');
 var el;
 
 
@@ -605,19 +610,6 @@ headerMenu.addEventListener('click', function() {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 function strikethroughShow(el) {
   let element =  el.closest('.main-container');
   let elementTarget = element.querySelector('.main-container__task-list');
@@ -649,8 +641,19 @@ btnMenu.addEventListener('click', function() {
   cap.classList.toggle('size');
 },500);
 
+btnNewTask.addEventListener('click', function() {
+  thirdColumn.classList.toggle('w100');
+  secondColumn.classList.toggle('w-100');
+  tasks.classList.toggle('fadeIn');
+});
 
-
+window.addEventListener('resize', function() {
+  if(window.matchMedia("(min-width: 699px)").matches) {
+  thirdColumn.classList.remove('w100');
+  secondColumn.classList.remove('w-100');
+  tasks.classList.remove('fadeIn');
+}
+});
 
 
 

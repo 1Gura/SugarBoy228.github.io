@@ -107,6 +107,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Переменные */
 /* Шаблоны */
 /* Миксины */
+.html, body {
+  overflow: hidden; }
+
 button {
   outline: none !important; }
 
@@ -123,6 +126,9 @@ button {
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s; }
+
+.popup {
+  position: absolute; }
 
 .strikethrough {
   text-decoration: line-through;
@@ -186,7 +192,26 @@ button {
   margin-top: 10px; }
 
 .back {
-  margin-left: 10px !important; }
+  margin-left: 0px !important; }
+
+@media (max-width: 699px) {
+  .tasks.fadeIn {
+    display: none; } }
+
+@media (max-width: 699px) {
+  .w100 {
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    width: 100% !important;
+    display: block !important; } }
+
+@media (max-width: 699px) {
+  .w-100 {
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    width: 0 !important; } }
 
 .hide {
   display: none;
@@ -290,7 +315,7 @@ button {
   .size {
     height: 140px !important; } }
 
-@media (max-width: 313px) {
+@media (max-width: 376px) {
   .size {
     height: 240px !important; } }
 
@@ -302,9 +327,17 @@ button {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  background-color: #A5B7EE; }
+  background-color: #A5B7EE;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  @media (max-width: 699px) {
+    .cap {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; } }
   .cap .btn-menu {
-    width: 50px;
+    min-width: 50px;
     height: 50px;
     background-image: url("../img/1.png");
     background-size: 100%;
@@ -319,11 +352,29 @@ button {
     @media (min-width: 1025px) {
       .cap .btn-menu {
         display: none; } }
-  .cap .cap__header-menu {
-    margin-left: -150%;
+  .cap .btn-new-task {
+    min-width: 40px;
+    height: 40px;
+    background-image: url("../img/plus.png");
+    opacity: 0.7;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+    @media (min-width: 700px) {
+      .cap .btn-new-task {
+        display: none; } }
+  .cap .cap__header-menu {
+    margin-left: -200%;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    overflow: hidden;
     width: 90%;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -340,13 +391,16 @@ button {
     @media (max-width: 568px) {
       .cap .cap__header-menu {
         -ms-flex-wrap: wrap;
-        flex-wrap: wrap; } }
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; } }
     @media (max-width: 313px) {
       .cap .cap__header-menu {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        margin-right: 7%; } }
+        margin-right: 0; } }
     .cap .cap__header-menu .cap__header-btn {
       width: 120px;
       height: 35px;
@@ -362,7 +416,7 @@ button {
       @media (max-width: 480px) {
         .cap .cap__header-menu .cap__header-btn {
           width: 150px; } }
-      @media (max-width: 380px) {
+      @media (max-width: 436px) {
         .cap .cap__header-menu .cap__header-btn {
           width: 120px; } }
 
@@ -374,7 +428,7 @@ button {
   display: flex;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  min-height: 100vh; }
+  height: 93.72624vh; }
   .main-container .btn-menu {
     position: absolute;
     left: 1%;
@@ -514,6 +568,9 @@ button {
     @media (max-width: 1024px) {
       .main-container .main-container__second-column {
         width: 50%; } }
+    @media (max-width: 699px) {
+      .main-container .main-container__second-column {
+        width: 100%; } }
     .main-container .main-container__second-column .main-container__task-list-empty {
       color: rgba(112, 104, 101, 0.562);
       text-align: center; }
@@ -627,6 +684,9 @@ button {
     @media (max-width: 1024px) {
       .main-container .main-container__third-column {
         width: 50%; } }
+    @media (max-width: 699px) {
+      .main-container .main-container__third-column {
+        display: none; } }
     .main-container .main-container__third-column .task-add {
       position: relative;
       display: -webkit-box;

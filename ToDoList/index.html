@@ -19,26 +19,30 @@
 	<!-- Отображаемое тело страницы -->
 	<body>
 		
-
-<header class="header">
-
-</header>
 <header class="cap">
-	<!-- <button class="btn-menu">
-		
-		<img class="btn-menu__img" src="../img/1.png" alt="">
-	</button> -->
 	<div class="btn-menu"></div>
 	<div class="cap__header-menu ">
 		<button class="cap__header-btn all-tasks">Все</button>
 		<button class="cap__header-btn blue ">Бессрочные</button>
 		<button class="cap__header-btn yellow ">Недельные</button>
 		<button class="cap__header-btn red ">День</button>
-		<button class="cap__header-btn completed">Выполненные</button>
-		
+		<button class="cap__header-btn completed">Выполненные</button>	
 	</div>
-	
+	<div class="btn-new-task"></div>
 </header>
+
+<!-- <div class="popup">
+	<h1>Добавление задачи</h1>
+	<div class="task-add">
+		<p class="task-add__error hide">Это поле обязательно для заполнения</p>
+		<input maxlength="50" type="text"  class="main-container__input" placeholder="Введите задачу"></input>
+		<label class="comment">Оставьте комментарий</label>
+		<div class="main-container__textarea" ></div>
+		<button class="task-add__button">Добавить задачу</button>
+	</div>
+</div> -->
+
+
 		<div class="main-container">
 			<div class="main-container__first-column">
 				<h1>Меню</h1>
@@ -52,7 +56,7 @@
 			</div>
 	
 			<div class="main-container__second-column">
-				<h1>Задачи</h1>
+				<h1 class="tasks">Задачи</h1>
 				<p class="main-container__task-list-empty">Список пуст...</p>
 				<ul class="main-container__task-list">
 				
