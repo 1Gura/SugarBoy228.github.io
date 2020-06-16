@@ -164,6 +164,10 @@ function addBlock() {
     }
     else title.style.display = 'none';
   }
+
+  thirdColumn.classList.remove('w100');
+  secondColumn.classList.remove('w-100');
+  tasks.classList.remove('fadeIn');
 }
 
 function addBlockKye(ev) {
@@ -191,7 +195,10 @@ function addBlockKye(ev) {
     }
     else title.style.display = 'none';
   }
-  }
+  thirdColumn.classList.remove('w100');
+  secondColumn.classList.remove('w-100');
+  tasks.classList.remove('fadeIn');
+  } 
 }
 
 
@@ -645,6 +652,7 @@ btnNewTask.addEventListener('click', function() {
   thirdColumn.classList.toggle('w100');
   secondColumn.classList.toggle('w-100');
   tasks.classList.toggle('fadeIn');
+  title.style.display = 'none';
 });
 
 window.addEventListener('resize', function() {
@@ -654,6 +662,7 @@ window.addEventListener('resize', function() {
   tasks.classList.remove('fadeIn');
 }
 });
+
 
 
 
