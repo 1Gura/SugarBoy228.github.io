@@ -113,7 +113,9 @@ function printDate() {
 	
 	// console.log('Сегодня ' + date + ' ' + mounth[mount] + ' ' + year + ', ' + days[day-1] + ', ' + hours + ' ' + hour+ ' '
   //  + minutes + ' ' + minute + ' ' + seconds + ' ' + second );	
-  let data = day+ ' '+mounth[mount]+ ' '+year
+  let data = date+ ' '+mounth[mount]+ ' '+year;
+  console.log(data);
+  
   return (data);
 }
 
