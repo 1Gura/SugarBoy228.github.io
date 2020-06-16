@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Шаблоны */
 /* Миксины */
 .html, body {
-  overflow: hidden; }
+  overflow: auto; }
 
 button {
   outline: none !important; }
@@ -436,8 +436,7 @@ button {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
-  height: 93.72624vh; }
+  justify-content: space-around; }
   .main-container .btn-menu {
     position: absolute;
     left: 1%;
