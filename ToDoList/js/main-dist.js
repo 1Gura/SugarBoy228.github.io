@@ -649,6 +649,7 @@ btnMenu.addEventListener('click', function() {
 },500);
 
 btnNewTask.addEventListener('click', function() {
+  btnNewTask.classList.toggle('rotate-btn');
   thirdColumn.classList.toggle('w100');
   secondColumn.classList.toggle('w-100');
   tasks.classList.toggle('fadeIn');

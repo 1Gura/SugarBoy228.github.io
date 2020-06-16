@@ -179,6 +179,14 @@ button {
   -o-transition: all 0.3s;
   transition: all 0.3s; }
 
+.rotate-btn {
+  -webkit-transform: rotate(45deg) !important;
+  -ms-transform: rotate(45deg) !important;
+  transform: rotate(45deg) !important;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
 .goBackMenu {
   margin-left: 0 !important;
   -webkit-transition: all 0.3s;
