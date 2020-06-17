@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Шаблоны */
 /* Миксины */
 .html, body {
-  overflow: auto;
+  overflow: hidden;
   min-height: 100vh;
   overflow-x: hidden; }
 
@@ -199,7 +199,8 @@ button {
   color: #ACACAC;
   float: right;
   margin-right: 30px;
-  margin-top: 10px; }
+  margin-top: 10px;
+  margin-bottom: 0; }
 
 .back {
   margin-left: 0px !important; }
@@ -351,6 +352,7 @@ button {
     height: 50px;
     background-image: url("../img/1.png");
     background-size: 100%;
+    opacity: 0.8;
     background-repeat: no-repeat;
     cursor: pointer;
     -webkit-transition: all 0.5s;
@@ -359,6 +361,8 @@ button {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg); }
+    .cap .btn-menu:hover {
+      opacity: 1; }
     @media (min-width: 1025px) {
       .cap .btn-menu {
         display: none; } }
@@ -366,7 +370,7 @@ button {
     min-width: 40px;
     height: 40px;
     background-image: url("../img/plus.png");
-    opacity: 0.7;
+    opacity: 0.6;
     background-size: 100%;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -377,6 +381,8 @@ button {
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
     margin-right: 5px; }
+    .cap .btn-new-task:hover {
+      opacity: 1; }
     @media (min-width: 700px) {
       .cap .btn-new-task {
         display: none; } }
@@ -437,7 +443,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 93.7vh;
+  height: 200vh;
   -ms-flex-pack: distribute;
   justify-content: space-around; }
   .main-container .btn-menu {
@@ -459,7 +465,7 @@ button {
     padding-top: 10px;
     font-size: 20px;
     text-align: center;
-    padding-bottom: 20px; }
+    padding-bottom: 10px; }
   .main-container .main-container__first-column {
     width: 20%;
     background-color: #DBDBDB;
@@ -591,8 +597,12 @@ button {
       display: flex;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      max-height: 660px;
-      overflow-y: auto; }
+      max-height: 87vh;
+      overflow-y: auto;
+      background-color: #E5E6E9; }
+      @media (max-width: 699px) {
+        .main-container .main-container__second-column .main-container__task-list {
+          height: 70vh !important; } }
       .main-container .main-container__second-column .main-container__task-list li {
         margin-bottom: 20px; }
     .main-container .main-container__second-column .main-container__task {
@@ -603,7 +613,7 @@ button {
       border-radius: 10px;
       background-color: #F1F1F1; }
       .main-container .main-container__second-column .main-container__task:last-child {
-        margin-bottom: 80px; }
+        margin-bottom: 90px; }
       .main-container .main-container__second-column .main-container__task .main-container__task-button {
         float: right;
         background-image: url(../img/krestik.webp);
@@ -693,7 +703,9 @@ button {
         overflow-y: auto; }
   .main-container .main-container__third-column {
     width: 30%;
-    background-color: #fff; }
+    height: 100vh;
+    background-color: #fff;
+    overflow: auto; }
     @media (max-width: 1024px) {
       .main-container .main-container__third-column {
         width: 50%; } }
@@ -711,9 +723,9 @@ button {
       -ms-flex-pack: center;
       justify-content: center;
       margin: 0 auto;
+      margin-bottom: 130px;
       width: 90%;
       padding: 10px 20px 20px 20px;
-      margin-bottom: 10px;
       border-radius: 20px;
       background-color: #76A6A8;
       background-repeat: no-repeat;
