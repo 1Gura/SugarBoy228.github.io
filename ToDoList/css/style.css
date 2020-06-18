@@ -609,6 +609,9 @@ button {
       margin: 0 auto;
       position: relative;
       width: 90%;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
       padding: 5px 5px 20px 20px;
       border-radius: 10px;
       background-color: #F1F1F1; }
