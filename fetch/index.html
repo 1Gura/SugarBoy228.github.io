@@ -1,0 +1,53 @@
+
+
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="en">
+	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>Поиск</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<script defer src="js/main-dist.js"></script>
+	</head>
+	<!-- Отображаемое тело страницы -->
+	<body>
+		
+
+<header class="header">
+
+</header>
+		<div class="content">
+
+			<div class="search">
+				<div class="search_form"><label><select class="dropdown"   onchange="SetCard(this)" >
+					<option  selected value="person" class="item-dropdown" id="serchPeople">Поиск персонажа</option>
+					<option  value="planet" class="item-dropdown" id="serchPlanet">Поиск планеты</option>
+					<option value="ship"  class="item-dropdown" id="serchShip">Поиск корабля</option>
+				</select> <input type="text" class="person_search" id="person_search_input"> <button id="search_request_btn" class="button">Найти</button></div></label>
+				<span id="msg"></span>
+				<ul class="search_result">
+				</ul>
+			</div>
+		
+			<div class="person_data">
+				<div>Имя: <span id="name"></div>
+				<div>Рост: <span id="height"></div>
+				<div>Вес: <span id="mass"></div>
+				<div>Год рождения: <span id="birth_year"></div>
+				<div>В скольки фильмах появлялся: <span id="films_count"></div>
+			</div>
+		</div>
+	<footer class="footer">
+	
+
+</footer>
+
+<!-- Подключение скриптов -->
+
+</body>
+</html>

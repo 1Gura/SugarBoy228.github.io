@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import 'https://fonts.googleapis.com/css?family=Ubuntu:400,500&subset=latin,cyrillic';
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+nav, footer, header, aside {
+  display: block; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a:active, a:focus {
+  outline: none; }
+
+button {
+  outline: none; }
+
+input, textarea {
+  outline: none; }
+
+input:active, textarea:active {
+  outline: none; }
+
+:focus {
+  outline: none; }
+
+textarea {
+  resize: none; }
+
+textarea {
+  resize: vertical; }
+
+textarea {
+  resize: horizontal; }
+
+a {
+  display: inline-block;
+  position: relative;
+  color: #000000; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+li {
+  list-style-type: none;
+  /* Убираем маркеры */ }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit; }
+
+/*--------------------*/
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/roboto-v20-cyrillic_latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Roboto"), local("Roboto-Regular"), url("fonts/roboto-v20-cyrillic_latin-regular.eot?#iefix") format("embedded-opentype"), url("fonts/roboto-v20-cyrillic_latin-regular.woff2") format("woff2"), url("fonts/roboto-v20-cyrillic_latin-regular.woff") format("woff"), url("fonts/roboto-v20-cyrillic_latin-regular.ttf") format("truetype"), url("fonts/roboto-v20-cyrillic_latin-regular.svg#Roboto") format("svg");
+  /* Legacy iOS */ }
+
+/* Переменные */
+/* Шаблоны */
+/* Миксины */
+html, body {
+  width: 100%;
+  height: 100%; }
+
+body, input[text] {
+  font-family: 'Ubuntu', serif;
+  font-size: 20px;
+  background: #000;
+  color: #FFE81F; }
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 20px;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  -webkit-box-align: top;
+  -ms-flex-align: top;
+  align-items: top; }
+
+.search input.person_search {
+  size: 40px;
+  width: 50%; }
+
+.search .search_result li {
+  list-style-type: none;
+  padding: 7px;
+  margin: 6px;
+  border: solid 2px;
+  cursor: pointer; }
+
+.search .search_result li:hover {
+  border-color: #fff;
+  color: #fff; }
+
+.person_data {
+  margin: 35px 50px;
+  width: 50%; }
+
+.person_data div {
+  padding: 5px 0px; }
+
+.button {
+  background-color: #000;
+  color: #FFE81F;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border: solid 2px; }
+
+input[type=text] {
+  padding: 7px 10px;
+  margin: 0px 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #FFE81F;
+  color: black;
+  border: solid 0px #000;
+  outline-color: #131417;
+  font-size: 20px; }
+
+  label {
+    display: flex;
+    width: 100%;
+  }
+
+  .search {
+    width: 50%;
+  }
+
+  .dropdown {
+    color: #FFE81F;
+    background-color: black;
+  }
+
+/*# sourceMappingURL=style.css.map */
+
